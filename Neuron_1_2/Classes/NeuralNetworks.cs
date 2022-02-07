@@ -18,11 +18,12 @@ namespace Neuron_1_2.Classes
             CreateOutputLauer();//создаю выходной слой 
         }
 
+        //TODO : остлось функция рачета значения и функция обучения ...... эх
         private void CreateOutputLauer()
         {
             //как я и сказал в топологии, будет только одно выходное значение 
             Neuron[] neuron = new Neuron[1];// да да делаю массив из 1го нейрона (уже позно и я не соображаю) 
-            neuron[0] = new Neuron(Topologi.hiddenLayerd[Topologi.hiddenLayerd.Length-1]);
+            neuron[0] = new Neuron(Topologi.HiddenLayerd[Topologi.HiddenLayerd.Length-1]);
             //в нейроне надо создать количество связей равное количеству связей на последнем скрытом слое 
         }
 
@@ -35,8 +36,8 @@ namespace Neuron_1_2.Classes
         }
         private Layer CreateHidenLauer(int n)
         {// n значение глобального слоя который создаем, но 1 глобальному слою сооветсвует 0 слой скрытого  
-            Neuron[] resaylr = new Neuron[Topologi.hiddenLayerd[n - 1] + 1];//
-            for (int i = 0; i < Topologi.hiddenLayerd[n-1]; i++)
+            Neuron[] resaylr = new Neuron[Topologi.HiddenLayerd[n - 1] + 1];//
+            for (int i = 0; i < Topologi.HiddenLayerd[n-1]; i++)
             {   //заполняю нейронами стандартного (скрытого) типа 
                 var neuron = new Neuron(Layers[n-1].NeuronCount);//количество связей равно количеству нейронов
                 resaylr[i] = neuron;// на предыдущем слое 
