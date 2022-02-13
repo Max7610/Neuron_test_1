@@ -12,10 +12,9 @@ namespace Neuron_1_2.Classes
                 Weights[i] = 1;
             }
         }
-        public override double FeedForwardSigmoid(double[] inputs)
+        public override double FeedForwardInput(double inputs)
         {//выводит просто одно значение, поэтому функция активации ненужна 
-            inputs.CopyTo(Inputs, 0);
-            Output =SumInputs();
+            Output =inputs;
             return Output;
         }
     }

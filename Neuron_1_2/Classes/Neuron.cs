@@ -7,7 +7,7 @@ namespace Neuron_1_2.Classes
         public double[] Weights { get; private set; }//вес аксона 
         public double[] Inputs { get; private set; }//массив входных значений
         public double Output { get; protected set; }// исходящий объем 
-        public double LocalGradient { get; protected set; } // докальный градиент 
+        public double LocalGradient { get; protected set; } // локальный градиент 
         
 
         public Neuron(int countInput)//Количество связей с нижним слоем 
@@ -67,6 +67,10 @@ namespace Neuron_1_2.Classes
         public virtual double MultiLocalGradientAndWeight(int n)
         {// возвращаем произведение градиента на вес указанного синапса
             return Weights[n] * LocalGradient;
+        }
+        public virtual double FeedForwardInput(double inputs)
+        {
+            return 0;
         }
     }
 }

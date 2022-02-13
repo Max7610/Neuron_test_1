@@ -11,6 +11,7 @@ namespace Neuron_1_2.Classes
             {
                 Weights[i] = 1;
             }
+            Output = 1;
         }
         public override double FeedForwardSigmoid(double[] inputs)
         {//Базис не имеет ни каких значений, он всегда равен 1 

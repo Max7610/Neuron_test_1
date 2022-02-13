@@ -16,6 +16,7 @@ namespace Neuron_1_2.Classes
             LearningRate = learningRate;
             InputCount = inputCount;
             OutputCount = outputCount;
+            HiddenLayerd = new int[lauers.Length];
             lauers.CopyTo(HiddenLayerd,0);
         }
         public int CountLayers()
